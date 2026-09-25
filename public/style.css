@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Esconde elementos */
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   TELA INICIAL
+========================= */
+
+#tela-inicial {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #162447;
+}
+
+#tela-inicial h1 {
+    font-size: 50px;
+    color: #e94560;
+    margin-bottom: 10px;
+}
+
+#tela-inicial p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   CONTROLES
+========================= */
+
+.controles-jogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+select,
+input[type="text"],
+button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+select,
+input[type="text"] {
+    background-color: #0f3460;
+    color: white;
+
+    border: 1px solid #e94560;
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+
+/* =========================
+   RANKING
+========================= */
+
+.secao-ranking {
+    width: 100%;
+    max-width: 650px;
+
+    background-color: rgba(15, 52, 96, 0.8);
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.secao-ranking h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f8b500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    color: #e94560;
+}
+
+
+/* =========================
+   TELA DO JOGO
+========================= */
+
+#tela-jogo {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    cursor: crosshair;
+}
+
+
+/* =========================
+   HUD
+========================= */
+
+.hud {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(15, 52, 96, 0.9);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    z-index: 10;
+
+    border-bottom: 2px solid #e94560;
+}
+
+
+/* =========================
+   VIDAS
+========================= */
+
+.vidas {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.vidas .coracao {
+    width: 35px;
+    height: 35px;
+
+    object-fit: contain;
+
+    transition: opacity 0.3s;
+}
+
+
+/* =========================
+   ÁREA DO JOGO
+========================= */
+
+#palco-jogo {
+    width: 100vw;
+    height: calc(100vh - 70px);
+
+    margin-top: 70px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image: url("imagens/fundo-jogo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   MOSQUITO
+========================= */
+
+.mosquito {
+    position: absolute;
+}
+
+
+.tam0 {
+    width: 40px;
+}
+
+.tam1 {
+    width: 60px;
+}
+
+.tam2 {
+    width: 80px;
+}
